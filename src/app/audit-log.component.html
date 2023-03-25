@@ -1,0 +1,18 @@
+<mat-dialog-content class="mat-typography">
+    <ag-grid-angular
+        #agGridComp
+        style="width: 100%; height: calc(100% - 25px);"
+        class="ag-theme-balham" 
+        [rowData]="gridRowData"
+        [columnDefs]="gridColumnDefs"
+        [rowBuffer]= "5"
+        [colResizeDefault]="colResizeDefault"
+        [defaultColDef]="defaultColDef"
+        [pagination]="true"
+        [paginationPageSize]="10"
+        [domLayout]="domLayout">
+    </ag-grid-angular>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+  </mat-dialog-actions>
