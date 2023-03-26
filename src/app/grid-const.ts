@@ -2,7 +2,7 @@ export const COL_DEFS = [
     { headerName: 'EIN', field: 'createdByEIN', pinned: 'left', width: 100 },
     { headerName: 'Bypass Code', field: 'bypassCode', pinned: 'left', width: 150 },
     { headerName: 'Action', field: 'action', pinned: 'left', width: 100 },
-    { headerName: 'Status',
+    { headerName: 'Status', headerClass: 'text-center',
         children: [
             { headerName: 'Old Value', field: 'statusOldValue', width: 100 },
             { headerName: 'New Value', field: 'statusNewValue', width: 100 }
@@ -49,7 +49,27 @@ export const ROW_DATA = [
         notesNewValue: 'Thi is the updated notes value',
         createdTimestamp: '23/03/2023',
         updatedTimestamp: '24/03/2023'
-    }
+    },
+    {
+        createdByEIN: '45434234',
+        bypassCode: 'xxx-yyy-zzz-12-45',
+        action: 'UPDATE',
+        partnerOldValue: 'RUPA Enterprises PVT LTD',
+        partnerNewValue: 'XX Former Partner',
+        notesOldValue: 'Thi is the updated notes value',
+        notesNewValue: 'Updated notes',
+        createdTimestamp: '23/03/2023',
+        updatedTimestamp: '26/03/2023'
+    },
+    {
+        createdByEIN: '45434234',
+        bypassCode: 'xxx-yyy-zzz-12-45',
+        action: 'DELETE',
+        statusNewValue: 'Active',
+        partnerNewValue: 'LISA Enterprise LTD',
+        notesNewValue: 'This is the first bypass code',
+        updatedTimestamp: '26/03/2023'
+    },
 ]
 export interface AuditLog {
     createdByEIN: string;

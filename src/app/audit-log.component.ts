@@ -12,7 +12,7 @@ export class AuditLogComponent implements OnInit {
     colResizeDefault!: string;
     defaultColDef!: {[key: string]: any};
     ngOnInit(): void {
-        this.gridRowData = Array(20).fill(ROW_DATA[1]);
+        this.gridRowData = ROW_DATA;
         this.domLayout = 'autoHeight';
         this.colResizeDefault = 'shift'
         this.defaultColDef = { resizable: true };

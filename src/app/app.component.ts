@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ColDef } from 'ag-grid-community';
 import { AuditLogComponent } from './audit-log.component';
-import { ROW_DATA, COL_DEFS } from './grid-const';
+import { ROW_DATA, COL_DEFS, AuditLog } from './grid-const';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +11,12 @@ import { ROW_DATA, COL_DEFS } from './grid-const';
 })
 export class AppComponent implements OnInit {
   title = 'angular-ag-grid-project';
-  gridRowData:any;
-  gridColumnDefs: any;
-  domLayout = 'autoHeight';
+
   constructor(private dialog: MatDialog) {
     // constructor
-    this.gridColumnDefs = COL_DEFS;
   }
   ngOnInit(): void {
-    this.gridRowData = ROW_DATA;
+    // oninint
   }
   openGridModal(): void {
     this.dialog.open(AuditLogComponent, {
