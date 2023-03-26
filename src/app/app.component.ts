@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ColDef } from 'ag-grid-community';
 import { AuditLogComponent } from './audit-log.component';
-import { ROW_DATA, COL_DEFS, AuditLog } from './grid-const';
 
 @Component({
   selector: 'app-root',
